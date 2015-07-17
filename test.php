@@ -35,7 +35,7 @@ if($testquery = mrksql3_select('users', '*', '1', false, false)){
 echo "\n\nInsert test user...\n";
 if(mrksql3_insert('users', array('username'=>'test', 'password'=>'test', 'email'=>'debug@subaddiction.net', 'token'=>'1234567890'))){
 	print_r($testquery);
-	echo "\nOK\n\n";
+	echo "\nOK - ID:".mrksql3_lastid()."\n\n";
 } else {
 	mrksql3_error();
 }

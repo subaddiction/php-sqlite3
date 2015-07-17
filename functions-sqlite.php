@@ -218,6 +218,14 @@ function mrksql3_delete($table, $condition){
 }
 
 
+//LAST ID
+function mrksql3_lastid(){
+	
+	global $link;
+	return $link->lastInsertRowID();
+
+}
+
 
 //COUNT A RESULT SET
 function mrksql3_count($table, $fields=0, $condition='1'){
